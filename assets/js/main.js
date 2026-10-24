@@ -177,11 +177,5 @@ function openQuickWhatsApp(customContext = '') {
  * Fungsi Pintas WhatsApp untuk Promosi RM180 (10 Terawal)
  */
 function openPromoWhatsApp() {
-  const whatsappNumber = (typeof homestayConfig !== 'undefined' && homestayConfig.brand.whatsappNumber) 
-    ? homestayConfig.brand.whatsappNumber 
-    : '60145113466';
-
-  const text = 'Salam Puan Shahirah, saya berminat nak buat tempahan *Promosi Terhad RM180* (Harga asal ~RM250~) terhad untuk 10 orang terawal di Rumah Kita Homestay, Gua Musang. Adakah slot promosi ini masih ada?';
-  const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)}`;
-  window.open(url, '_blank');
+  document.getElementById('tempahan')?.scrollIntoView({behavior:'smooth'});
 }

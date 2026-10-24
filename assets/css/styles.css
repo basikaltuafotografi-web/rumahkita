@@ -302,3 +302,12 @@ html #mobile-menu .btn-terracotta { color: white; }
   html:root { scroll-behavior: auto; }
   html *, html *::before, html *::after { animation: none !important; transition: none !important; }
 }
+
+html .booking-honeypot { position: absolute; left: -9999px; opacity: 0; pointer-events: none; }
+html .booking-estimate { padding: 18px; background: #FAF7F2; border: 1px solid #E8DCCB; border-radius: 14px; font-size: 13px; }
+html .booking-estimate p { margin-top: 6px; color: #837266; font-size: 11px; }
+html .booking-estimate a { display: inline-block; margin-top: 10px; color: #A85038; text-decoration: underline; font-size: 11px; }
+html .booking-consent { display: flex; align-items: flex-start; gap: 10px; font-size: 12px; line-height: 1.7; color: #5C5047; }
+html .booking-consent input { width: 18px; height: 18px; min-height: 0; margin-top: 2px; flex-shrink: 0; }
+html #booking-error { padding: 12px; border-radius: 12px; border: 1px solid #E9B9AD; background: #FFF0ED; color: #8B3C30; font-size: 12px; }
+html #booking-submit:disabled { opacity: .55; cursor: wait; }

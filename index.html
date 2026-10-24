@@ -44,7 +44,7 @@
   </script>
 
   <!-- Google Fonts & Custom CSS -->
-  <link rel="stylesheet" href="assets/css/styles.css?v=3">
+  <link rel="stylesheet" href="assets/css/styles.css?v=4">
 </head>
 <body class="bg-[#FAF7F2] text-[#2B231E] font-sans antialiased selection:bg-[#F8ECE7] selection:text-[#C26146] pb-16 md:pb-0">
 
@@ -482,7 +482,7 @@
               <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2zm5.79 14.07c-.24.68-1.39 1.3-1.92 1.38-.49.08-1.12.11-3.62-.92-3.19-1.32-5.26-4.57-5.42-4.78-.16-.21-1.3-1.73-1.3-3.3 0-1.57.82-2.34 1.11-2.66.29-.32.63-.4.84-.4.21 0 .42 0 .61.01.2.01.47-.08.73.55.27.64.91 2.22.99 2.38.08.16.13.35.03.56-.1.21-.16.35-.32.53-.16.19-.34.42-.48.56-.16.16-.33.33-.14.66.19.33.84 1.39 1.8 2.25 1.24 1.1 2.28 1.45 2.61 1.61.33.16.52.14.71-.08.2-.22.84-.98 1.06-1.32.22-.34.45-.28.75-.17.3.11 1.9.9 2.23 1.06.33.16.55.24.63.38.08.14.08.8-.16 1.48z"/>
               </svg>
-              <span>Rebut Slot Promo RM180 (WhatsApp)</span>
+              <span>Tempah Promo RM180</span>
             </button>
             <p class="text-[11px] text-[#8C7B70]">
               Hubungi terus Puan Shahirah untuk semak kekosongan tarikh pilihan anda.
@@ -501,16 +501,16 @@
       <div class="card-soft p-6 sm:p-10 bg-white">
         
         <div class="text-center max-w-xl mx-auto mb-8">
-          <span class="badge-terracotta">Pertanyaan Mudah Melalui WhatsApp</span>
+          <span class="badge-terracotta">Tempahan Penginapan</span>
           <h2 class="font-serif text-3xl sm:text-4xl font-bold text-[#2B231E] mt-2">
-            Semak Tarikh & Buat Pertanyaan
+            Pilih Tarikh &amp; Tempah
           </h2>
           <p class="text-sm text-[#5C5047] mt-2">
-            Isikan butiran ringkas di bawah. Sistem akan menyediakan draf mesej WhatsApp kemas yang bersedia dihantar terus kepada <strong>Puan Shahirah (014-511 3466)</strong>.
+            Hantar permohonan terus kepada kami. Deposit <strong>RM50</strong> diperlukan dan tempahan disahkan selepas semakan pemilik.
           </p>
         </div>
 
-        <form id="whatsapp-booking-form" class="space-y-5">
+        <form id="booking-request-form" class="space-y-5">
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
             
             <!-- Nama Tetamu -->
@@ -518,7 +518,7 @@
               <label for="guest-name" class="block text-xs font-semibold text-[#2B231E] mb-1.5 uppercase tracking-wide">
                 Nama Anda <span class="text-[#C26146]">*</span>
               </label>
-              <input type="text" id="guest-name" required placeholder="Contoh: Ahmad Razali" class="input-warm">
+              <input type="text" id="guest-name" autocomplete="name" maxlength="100" required placeholder="Contoh: Ahmad Razali" class="input-warm">
             </div>
 
             <!-- Bilangan Tetamu -->
@@ -526,12 +526,7 @@
               <label for="guest-count" class="block text-xs font-semibold text-[#2B231E] mb-1.5 uppercase tracking-wide">
                 Bilangan Tetamu <span class="text-[#C26146]">*</span>
               </label>
-              <select id="guest-count" class="input-warm">
-                <option value="1 - 3">1 - 3 Orang</option>
-                <option value="4 - 6" selected>4 - 6 Orang (Keluarga)</option>
-                <option value="7 - 10">7 - 10 Orang</option>
-                <option value="Lebih daripada 10">Lebih daripada 10 Orang</option>
-              </select>
+              <select id="guest-count" class="input-warm"><option value="1">1 orang</option><option value="2">2 orang</option><option value="3">3 orang</option><option value="4" selected>4 orang</option><option value="5">5 orang</option><option value="6">6 orang</option><option value="7">7 orang</option><option value="8">8 orang</option><option value="9">9 orang</option><option value="10">10 orang</option></select>
             </div>
 
             <!-- Tarikh Cadangan Masuk (Check-in) -->
@@ -539,7 +534,7 @@
               <label for="check-in-date" class="block text-xs font-semibold text-[#2B231E] mb-1.5 uppercase tracking-wide">
                 Tarikh Masuk (Check-in)
               </label>
-              <input type="date" id="check-in-date" class="input-warm">
+              <input type="date" id="check-in-date" required class="input-warm">
             </div>
 
             <!-- Tarikh Cadangan Keluar (Check-out) -->
@@ -547,29 +542,39 @@
               <label for="check-out-date" class="block text-xs font-semibold text-[#2B231E] mb-1.5 uppercase tracking-wide">
                 Tarikh Keluar (Check-out)
               </label>
-              <input type="date" id="check-out-date" class="input-warm">
+              <input type="date" id="check-out-date" required class="input-warm">
             </div>
 
           </div>
+
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div><label for="guest-phone" class="block text-xs font-semibold mb-1.5">Nombor WhatsApp *</label><input id="guest-phone" type="tel" autocomplete="tel" maxlength="30" required placeholder="Contoh: 0123456789" class="input-warm"></div>
+            <div><label for="guest-email" class="block text-xs font-semibold mb-1.5">E-mel (pilihan)</label><input id="guest-email" type="email" autocomplete="email" maxlength="180" placeholder="nama@contoh.com" class="input-warm"></div>
+          </div>
+          <div class="booking-honeypot" aria-hidden="true"><label>Laman web<input id="guest-website" tabindex="-1" autocomplete="off"></label></div>
+          <div class="booking-estimate" aria-live="polite"><strong id="booking-quote">Memuatkan kadar penginapan…</strong><p>Deposit RM50 · Baki dibayar mengikut arahan pemilik.</p><a href="https://rumah-kita-bookings.tangydog8.chatgpt.site/" target="_blank" rel="noopener">Lihat kalendar ketersediaan ↗</a></div>
+          <label class="booking-consent"><input id="booking-consent" type="checkbox" required><span>Saya faham tempahan ini menunggu semakan deposit dan belum disahkan sehingga diluluskan oleh pemilik.</span></label>
+          <p id="booking-error" role="alert" hidden></p>
 
           <!-- Nota / Pertanyaan Khas -->
           <div>
             <label for="guest-notes" class="block text-xs font-semibold text-[#2B231E] mb-1.5 uppercase tracking-wide">
               Nota / Pertanyaan Tambahan (Pilihan)
             </label>
-            <textarea id="guest-notes" rows="3" placeholder="Contoh: Ada anak kecil / Pertanyaan waktu daftar masuk..." class="input-warm"></textarea>
+            <textarea id="guest-notes" rows="3" maxlength="1500" placeholder="Contoh: Ada anak kecil / Pertanyaan waktu daftar masuk..." class="input-warm"></textarea>
           </div>
 
           <!-- Butang Hantar WhatsApp -->
           <div class="pt-2">
-            <button type="submit" class="w-full btn-terracotta text-base !py-3.5 shadow-md">
+            <button id="booking-submit" type="submit" disabled class="w-full btn-terracotta text-base !py-3.5 shadow-md">
               <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2zm5.79 14.07c-.24.68-1.39 1.3-1.92 1.38-.49.08-1.12.11-3.62-.92-3.19-1.32-5.26-4.57-5.42-4.78-.16-.21-1.3-1.73-1.3-3.3 0-1.57.82-2.34 1.11-2.66.29-.32.63-.4.84-.4.21 0 .42 0 .61.01.2.01.47-.08.73.55.27.64.91 2.22.99 2.38.08.16.13.35.03.56-.1.21-.16.35-.32.53-.16.19-.34.42-.48.56-.16.16-.33.33-.14.66.19.33.84 1.39 1.8 2.25 1.24 1.1 2.28 1.45 2.61 1.61.33.16.52.14.71-.08.2-.22.84-.98 1.06-1.32.22-.34.45-.28.75-.17.3.11 1.9.9 2.23 1.06.33.16.55.24.63.38.08.14.08.8-.16 1.48z"/>
               </svg>
-              <span>Hantar Pertanyaan ke WhatsApp (014-511 3466)</span>
+              <span>Hantar Permohonan Tempahan</span>
             </button>
             <p class="text-center text-[11px] text-[#8C7B70] mt-2">
-              Tiada bayaran dikenakan semasa mengisi borang ini. Ia terus membuka aplikasi WhatsApp anda dengan mesej kemas.
+              Selepas menghantar, anda akan menerima pautan peribadi untuk semak status dan muat naik resit deposit.
             </p>
           </div>
         </form>
@@ -687,7 +692,7 @@
       <!-- Hak Cipta & Penafian -->
       <div class="pt-6 flex flex-col sm:flex-row justify-between items-center gap-3 text-center sm:text-left text-[11px] text-[#8C7B70]">
         <p>&copy; 2026 Rumah Kita Homestay. Hak Cipta Terpelihara.</p>
-        <p>Reka bentuk moden, minimalis & mesra peranti mudah alih.</p>
+        <p><a href="https://rumah-kita-bookings.tangydog8.chatgpt.site/admin">Dashboard pemilik ↗</a></p>
       </div>
 
     </div>
@@ -728,6 +733,7 @@
 
   <!-- Skrip Konfigurasi & Interaktiviti -->
   <script src="data/homestay-info.js"></script>
-  <script src="assets/js/main.js"></script>
+  <script src="assets/js/main.js?v=4"></script>
+  <script src="assets/js/booking.js?v=4" defer></script>
 </body>
 </html>

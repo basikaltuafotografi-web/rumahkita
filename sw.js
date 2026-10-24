@@ -1,11 +1,12 @@
 // Service Worker for Rumah Kita Homestay PWA
-const CACHE_NAME = 'rumah-kita-v3';
+const CACHE_NAME = 'rumah-kita-v4';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',
   './manifest.json',
-  './assets/css/styles.css?v=3',
-  './assets/js/main.js',
+  './assets/css/styles.css?v=4',
+  './assets/js/main.js?v=4',
+  './assets/js/booking.js?v=4',
   './data/homestay-info.js',
   './assets/icons/icon-192.png',
   './assets/icons/icon-512.png'
@@ -35,7 +36,7 @@ self.addEventListener('activate', (event) => {
 
 self.addEventListener('fetch', (event) => {
   // Only handle GET requests
-  if (event.request.method !== 'GET') return;
+  if (event.request.method !== 'GET' || new URL(event.request.url).origin !== self.location.origin) return;
 
   event.respondWith(
     caches.match(event.request).then((cachedResponse) => {
