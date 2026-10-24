@@ -1,10 +1,10 @@
 // Service Worker for Rumah Kita Homestay PWA
-const CACHE_NAME = 'rumah-kita-v2';
+const CACHE_NAME = 'rumah-kita-v3';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',
   './manifest.json',
-  './assets/css/styles.css',
+  './assets/css/styles.css?v=3',
   './assets/js/main.js',
   './data/homestay-info.js',
   './assets/icons/icon-192.png',

@@ -176,3 +176,129 @@ body {
 #mobile-menu.hidden {
   display: none;
 }
+
+/* Clear navigation and comfortable touch targets across screen sizes. */
+html section[id] { scroll-margin-top: 88px; }
+html a, html button, html input, html select, html textarea { -webkit-tap-highlight-color: transparent; }
+html button, html a { touch-action: manipulation; }
+html :focus-visible { outline: 3px solid #A85038; outline-offset: 4px; }
+html .gallery-hint { display: none; }
+html .site-header {
+  background: rgba(250, 247, 242, .96);
+  border-color: #E8DCCB;
+  box-shadow: 0 3px 20px rgba(43, 35, 30, .04);
+}
+html .site-header > div > a > span:first-child { color: #2B231E; }
+html .site-header > div > a > span:last-child { color: #856C59; }
+html .site-header nav a { color: #5C5047; }
+html .site-header nav a:hover { color: #A85038; }
+html #mobile-menu-btn {
+  color: #2B231E;
+  background: #F0E7DC;
+  border-color: #E8DCCB;
+  min-width: 44px;
+  min-height: 44px;
+}
+html #mobile-menu { background: #FAF7F2; border-color: #E8DCCB; }
+html #mobile-menu a { color: #5C5047; min-height: 44px; }
+html #mobile-menu .btn-terracotta { color: white; }
+
+@media (max-width: 767px) {
+  html body { padding-bottom: calc(100px + env(safe-area-inset-bottom)); }
+  html section[id] { scroll-margin-top: 80px; }
+  html .site-header > div { height: 72px; padding-inline: 20px; }
+  html .site-header > div > a > span:first-child { font-size: 28px; line-height: 1; }
+  html .site-header > div > a > span:last-child {
+    margin-top: 5px; font-size: 8px; letter-spacing: .19em;
+  }
+  html .header-booking { display: inline-flex; font-size: 11px; min-height: 40px; }
+  html .header-booking svg { display: none; }
+  html #mobile-menu-btn { border-radius: 50%; }
+  html #mobile-menu { padding: 8px 20px 20px; box-shadow: 0 16px 20px rgba(43,35,30,.06); }
+  html #mobile-menu > a { border-bottom: 1px solid #E8DCCB; padding: 14px 0; font-size: 14px; }
+
+  html #utama { padding-block: 28px 36px; background: radial-gradient(ellipse at 100% 10%, #F0E3D2 0, transparent 58%), #FAF7F2; }
+  html #utama > div { padding-inline: 20px; }
+  html .hero-layout { display: flex; flex-direction: column; align-items: stretch; gap: 0; }
+  html .hero-copy { display: contents; }
+  html .hero-copy > * { margin: 0 !important; }
+  html .hero-location { order: 1; align-self: flex-start; padding: 6px 10px; font-size: 9px; letter-spacing: .02em; }
+  html .hero-title { order: 2; margin-top: 16px !important; font-size: clamp(40px, 10.8vw, 56px); line-height: .98; letter-spacing: -.035em; text-align: left; }
+  html .hero-title > span { display: block; font-size: .86em; margin-top: 3px; font-weight: 400; }
+  html .hero-tagline { order: 3; margin-top: 10px !important; font-size: 20px; text-align: left; color: #856C59; }
+  html .hero-visual { order: 4; margin-top: 22px; }
+  html .hero-visual > .card-soft { padding: 0; border-radius: 22px; overflow: hidden; box-shadow: 0 12px 28px rgba(65,44,28,.1); }
+  html .hero-visual > .card-soft > div:first-child { aspect-ratio: 1.55; border-radius: 0; }
+  html .hero-visual img { object-position: center 52%; }
+  html .hero-visual .absolute { left: 12px; right: 12px; gap: 6px; }
+  html .hero-visual .absolute span { font-size: 8px; padding: 5px 8px; }
+  html .hero-visual > .card-soft > div:last-child { padding: 13px 15px; font-size: 10px; }
+  html .hero-visual button { min-height: 36px; }
+  html .hero-actions { order: 5; display: grid; grid-template-columns: 1fr; gap: 9px; padding-top: 0; margin-top: 20px !important; }
+  html .hero-actions > a { min-height: 49px; font-size: 13px; border-radius: 14px; padding: 12px 14px; font-weight: 600; }
+  html .hero-actions > a:last-child { min-height: 40px; border: 0; box-shadow: none; padding: 4px; color: #856C59; font-size: 11px; gap: 10px; }
+  html .hero-description { order: 6; max-width: 34em; margin-top: 9px !important; text-align: left; font-size: 12px; line-height: 1.9; }
+  html .hero-benefits { order: 7; display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 6px; padding-top: 18px; margin-top: 18px !important; font-size: 9px; }
+  html .hero-benefits > div { display: flex; flex-direction: column; align-items: center; gap: 6px; text-align: center; }
+  html .hero-benefits svg { width: 17px; height: 17px; }
+
+  html #tentang { height: 250px; margin: 0 20px; width: auto; border: 0; border-radius: 22px; }
+  html #ruang, html #kadar, html #lokasi { width: 100%; padding: 44px 20px; }
+  html #kemudahan, html #tempahan { padding-block: 44px; }
+  html #kemudahan > div, html #tempahan > div { padding-inline: 20px; }
+  html h2 { font-size: 32px !important; line-height: 1.08 !important; letter-spacing: -.025em; }
+  html .badge-warm, html .badge-terracotta { font-size: 9px; letter-spacing: .09em; padding: 6px 10px; }
+  html #ruang > div:first-child { margin-bottom: 16px; gap: 0; }
+  html #ruang > div:first-child > div:last-child { display: none; }
+  html #ruang > div:first-child p { font-size: 12px; margin-top: 8px; }
+  html .gallery-hint { display: flex; align-items: center; justify-content: space-between; color: #856C59; font-size: 10px; margin-bottom: 12px; }
+  html .gallery-hint span { font-size: 22px; }
+  html .room-gallery { display: flex; gap: 14px; overflow-x: auto; scroll-snap-type: x mandatory; scroll-padding-inline: 20px; margin-inline: -20px; padding: 0 20px 14px; scrollbar-width: thin; scrollbar-color: #C6A58D transparent; }
+  html .room-gallery > .card-soft { flex: 0 0 84%; scroll-snap-align: start; border-radius: 20px; }
+  html .room-gallery > .card-soft > div:first-child { aspect-ratio: 1.25; }
+  html .room-gallery h4 { font-family: var(--font-serif); font-size: 24px; }
+  html .room-gallery p { font-size: 12px; line-height: 1.8; }
+  html #kemudahan .mb-12 { margin-bottom: 24px; }
+  html #kemudahan .grid { gap: 10px; }
+  html #kemudahan .card-soft { padding: 18px 10px; border-radius: 18px; box-shadow: none; }
+  html #kemudahan .card-soft > div { width: 40px; height: 40px; margin-bottom: 10px; }
+  html #kemudahan h4 { font-size: 12px; }
+  html #kemudahan p { font-size: 12px; line-height: 1.8; }
+  html #kadar > div:first-child { margin-bottom: 34px; }
+  html #kadar .card-soft { border-width: 1px; border-radius: 24px; padding: 36px 18px 22px; box-shadow: 0 12px 28px rgba(65,44,28,.06); }
+  html .promo-ribbon { width: calc(100% - 24px); text-align: center; white-space: normal; }
+  html .promo-ribbon > span { font-size: 9px; padding: 9px 12px; letter-spacing: .02em; }
+  html #kadar .items-baseline { flex-wrap: wrap; }
+  html #kadar .btn-terracotta { font-size: 12px; border-radius: 14px; min-height: 48px; }
+  html #tempahan .card-soft { padding: 26px 18px; border-radius: 24px; box-shadow: none; }
+  html #tempahan .badge-terracotta { letter-spacing: .01em; }
+  html #tempahan h2 { margin-top: 14px; }
+  html #tempahan p { font-size: 12px; line-height: 1.8; }
+  html #tempahan label { font-size: 10px; }
+  html .input-warm { min-height: 50px; border-radius: 12px; font-size: 16px; background: #FFFDFA; }
+  html #tempahan button[type="submit"] { font-size: 12px; border-radius: 14px; }
+  html #tempahan button[type="submit"] svg { flex-shrink: 0; }
+  html #lokasi { gap: 24px; }
+  html #lokasi p { font-size: 12px; line-height: 1.8; }
+  html #lokasi .image-placeholder { padding: 18px; }
+  html footer { padding-bottom: 28px; }
+
+  html .mobile-dock { left: 12px; right: 12px; bottom: calc(10px + env(safe-area-inset-bottom)); border: 1px solid #E8DCCB; border-radius: 22px; padding: 8px; background: rgba(255,253,249,.97); box-shadow: 0 6px 32px rgba(43,35,30,.15); gap: 4px; }
+  html .mobile-dock > a { flex: 1; color: #856C59; min-height: 48px; padding: 6px 4px; font-size: 9px; gap: 5px; border-radius: 15px; }
+  html .mobile-dock > a:first-child { color: #A85038; }
+  html .mobile-dock > a:last-child { background: #C26146; color: #FFF; }
+  html .mobile-dock > a:nth-child(3) { color: #A85038; justify-content: center; }
+  html .mobile-dock .animate-ping { animation: none; }
+  html aside[aria-label="Akses Pantas WhatsApp"] { display: none; }
+}
+
+@media (max-width: 359px) {
+  html .header-booking { display: none; }
+  html .hero-visual .absolute span:last-child { display: none; }
+  html .promo-ribbon > span { font-size: 8px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:root { scroll-behavior: auto; }
+  html *, html *::before, html *::after { animation: none !important; transition: none !important; }
+}
