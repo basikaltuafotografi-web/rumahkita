@@ -1,0 +1,178 @@
+/* ==========================================================================
+   RUMAH KITA HOMESTAY - GUA MUSANG
+   Palet Warna & Tipografi Premium (Modern Warm Minimalist)
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+
+:root {
+  /* Palet Warna Earthy & Premium */
+  --color-bg-light: #FBF9F5;
+  --color-bg-card: #FFFFFF;
+  --color-bg-subtle: #F4EDE2;
+  --color-border: #E8DCCB;
+  
+  /* Terracotta (Aksen Utama & Butang) */
+  --color-terracotta: #C26146;
+  --color-terracotta-hover: #AA5037;
+  --color-terracotta-soft: #F7ECE8;
+  
+  /* Coklat Lembut & Deep Warm Taupe (Tipografi) */
+  --color-text-main: #2A2420;
+  --color-text-muted: #5C5047;
+  --color-text-subtle: #8E7E73;
+  
+  /* Tipografi */
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-sans);
+  background-color: var(--color-bg-light);
+  color: var(--color-text-main);
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Tipografi Khas */
+.font-serif-luxury {
+  font-family: var(--font-serif);
+}
+
+.font-sans-clean {
+  font-family: var(--font-sans);
+}
+
+/* Khas Kad & Bayang Lembut (Tiada glow kasar) */
+.card-soft {
+  background: #FFFFFF;
+  border: 1px solid var(--color-border);
+  border-radius: 1rem;
+  box-shadow: 0 4px 20px -2px rgba(42, 36, 32, 0.04), 0 2px 6px -1px rgba(42, 36, 32, 0.02);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card-soft:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px -4px rgba(42, 36, 32, 0.07), 0 4px 10px -2px rgba(42, 36, 32, 0.03);
+}
+
+/* Butang Terracotta Utama */
+.btn-terracotta {
+  background-color: var(--color-terracotta);
+  color: #FFFFFF;
+  font-weight: 500;
+  border-radius: 9999px;
+  padding: 0.85rem 1.75rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 14px rgba(194, 97, 70, 0.25);
+  text-decoration: none;
+}
+
+.btn-terracotta:hover {
+  background-color: var(--color-terracotta-hover);
+  box-shadow: 0 6px 18px rgba(194, 97, 70, 0.35);
+  transform: translateY(-1px);
+}
+
+/* Butang Garisan Lembut */
+.btn-outline-warm {
+  background-color: transparent;
+  color: var(--color-text-main);
+  border: 1.5px solid var(--color-border);
+  font-weight: 500;
+  border-radius: 9999px;
+  padding: 0.85rem 1.75rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.btn-outline-warm:hover {
+  background-color: var(--color-bg-subtle);
+  border-color: #D3C4AF;
+}
+
+/* Lencana / Badge */
+.badge-warm {
+  background-color: var(--color-bg-subtle);
+  color: var(--color-text-muted);
+  border: 1px solid var(--color-border);
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 0.35rem 0.85rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.badge-terracotta {
+  background-color: var(--color-terracotta-soft);
+  color: var(--color-terracotta);
+  border: 1px solid rgba(194, 97, 70, 0.2);
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  padding: 0.3rem 0.75rem;
+  border-radius: 9999px;
+  font-weight: 600;
+}
+
+/* Placeholder Galeri Visual */
+.image-placeholder {
+  background: linear-gradient(135deg, #F5ECE0 0%, #E9DDD0 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-muted);
+  border-radius: 0.75rem;
+  position: relative;
+  overflow: hidden;
+  border: 1px dashed #D3C2AF;
+}
+
+/* Borang Tempahan */
+.input-warm {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--color-border);
+  background-color: #FFFFFF;
+  color: var(--color-text-main);
+  font-size: 0.95rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.input-warm:focus {
+  outline: none;
+  border-color: var(--color-terracotta);
+  box-shadow: 0 0 0 3px rgba(194, 97, 70, 0.15);
+}
+
+/* Menu Bergerak (Mobile Menu Drawer) */
+#mobile-menu {
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+#mobile-menu.hidden {
+  display: none;
+}
