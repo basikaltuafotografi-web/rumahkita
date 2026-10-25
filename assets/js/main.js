@@ -1,3 +1,22 @@
+// A full welcome screen; deep links continue directly to their destination.
+(() => {
+  const launch = document.getElementById('launch-screen');
+  const app = document.getElementById('homestay-app');
+  const enter = document.getElementById('launch-enter');
+  if (!launch || !app || !enter || window.location.hash) return;
+  app.hidden = true;
+  launch.hidden = false;
+  document.body.classList.add('launch-open');
+  enter.addEventListener('click', () => {
+    launch.hidden = true;
+    app.hidden = false;
+    document.body.classList.remove('launch-open');
+    window.scrollTo(0, 0);
+    const home = app.querySelector('a[href="#utama"]');
+    if (home) home.focus({ preventScroll: true });
+  }, { once: true });
+})();
+
 /**
  * RUMAH KITA HOMESTAY - MAIN JAVASCRIPT
  * Mengendalikan fungsi navigasi mudah alih, PWA Install, dan penjanaan pertanyaan WhatsApp.
